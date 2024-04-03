@@ -8,23 +8,6 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
   { import = "astrocommunity.pack.rust" },
-  {
-    "simrat39/rust-tools.nvim",
-    opts = {
-      server = {
-        settings = {
-          ["rust-analyzer"] = {
-            -- Add clippy lints for Rust.
-            checkOnSave = {
-              allFeatures = true,
-              command = "clippy",
-              extraArgs = { "--no-deps" },
-            },
-          },
-        },
-      },
-    },
-  },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.typescript" },
