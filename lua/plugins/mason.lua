@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Mason plugins
 
 ---@type LazySpec
@@ -12,7 +10,12 @@ return {
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "lua_ls",
-        -- add more arguments for adding more language servers
+        "pyright",
+        "jdtls",
+        "taplo",
+        "lemminx",
+        "bashls",
+        "sqlls",
       })
     end,
   },
@@ -26,6 +29,22 @@ return {
         "prettier",
         "stylua",
         -- add more arguments for adding more null-ls sources
+        "black",
+        "clang-format",
+        "codelldb",
+        "eslint-lsp",
+        "eslint_d",
+        "isort",
+        "json-lsp",
+        "lua-language-server",
+        "prettierd",
+        "rust-analyzer",
+        "shfmt",
+        "sonarlint-language-server",
+        "sql-formatter",
+        "tailwindcss-language-server",
+        "typescript-language-server",
+        "vue-language-server",
       })
     end,
   },
@@ -36,6 +55,11 @@ return {
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "python",
+        "debugpy",
+        "java-debug-adapter",
+        "java-test",
+        "js-debug-adapter",
+
         -- add more arguments for adding more debuggers
       })
     end,
