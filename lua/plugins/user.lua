@@ -415,12 +415,12 @@ return {
     config = function()
       require("harpoon").setup {
         settings = {
-          save_on_toggle = false,
+          save_on_toggle = true,
           sync_on_ui_close = true,
           key = function() return vim.loop.cwd() end,
         },
       }
-      -- require("telescope").load_extension('harpoon')
+      -- require("telescope").load_extension "harpoon"
     end,
   },
   {
@@ -449,13 +449,14 @@ return {
         },
         {
           elements = {
-            {
-              id = "repl",
-              size = 0.17,
-            },
+            -- {
+            --   id = "repl",
+            --   size = 0.17,
+            -- },
             {
               id = "console",
-              size = 0.93,
+              -- size = 0.93,
+              size = 1,
             },
           },
           position = "bottom",
