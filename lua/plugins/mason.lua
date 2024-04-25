@@ -58,8 +58,6 @@ return {
         "debugpy",
         "java-debug-adapter",
         "java-test",
-        "js-debug-adapter",
-
         -- add more arguments for adding more debuggers
       })
     end,
