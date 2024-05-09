@@ -65,6 +65,13 @@ return {
           mode = { "n", "v" },
         },
       },
+      ["<leader>u"] = {
+        d = {
+          ":UndotreeToggle<CR>",
+          "show undotree",
+          mode = { "n", "v" },
+        },
+      },
     }
   end,
 }

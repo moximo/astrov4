@@ -179,7 +179,6 @@ return {
         ["<A-k>"] = { ":m .-2<CR>==" },
         ["<A-Enter>"] = { ":WindowsMaximize<CR>", desc = "windowMaxSize" },
         ["<leader><leader>"] = { ":WindowsEqualize<CR>", desc = "windowEqualize" },
-        ["<leader>ud"] = { ":UndotreeToggle<CR>", desc = "show undotree" },
         ["<leader>tr"] = {
           ":Pantran<CR>",
           desc = "translate",
