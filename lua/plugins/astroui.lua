@@ -24,8 +24,8 @@ return {
         FlashLabel = { bg = bg, fg = "#ff007c", bold = true },
         FlashBackdrop = { bg = bg, fg = "#6c7086" },
         -- 自定义的注释颜色
-        comment = { bg = bg, fg = "#6c7086" },
-        -- LineNr={ bg = bg, fg = "#e1eaff" }
+        -- comment = { bg = bg, fg = "#6c7086" },
+        -- LineNr = { bg = bg, fg = "#e1eaff" },
         ColorColumn = { bg = "#39434e" },
       },
       astrotheme = { -- a table of overrides/changes when applying the astrotheme theme
