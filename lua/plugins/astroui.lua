@@ -22,9 +22,11 @@ return {
         FlashMatch = { bg = bg, fg = "#89b4fa", bold = true, italic = true },
         FlashCurrent = { bg = bg, fg = "#04a5e5", bold = true, italic = true, underline = true },
         FlashLabel = { bg = bg, fg = "#ff007c", bold = true },
-        FlashBackdrop = { bg = bg, fg = "#6c7086" },
+        -- FlashBackdrop = { bg = bg, fg = "#6c7086" },
+        FlashBackdrop = { fg = "#6c7086" },
         -- 自定义的注释颜色
-        -- comment = { bg = bg, fg = "#6c7086" },
+        --comment = { bg = bg, fg = "#6c7086" },
+        comment = { fg = "#6c7086" },
         -- LineNr = { bg = bg, fg = "#e1eaff" },
         ColorColumn = { bg = "#39434e" },
       },
