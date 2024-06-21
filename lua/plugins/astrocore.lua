@@ -145,7 +145,7 @@ return {
         diagnostics_mode = 3, -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
         icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
         ui_notifications_enabled = true, -- disable notifications when toggling UI elements
-        resession_enabled = false, -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
+        resession_enabled = true, -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
 
         transparent_background = true,
         undotree_WindowLayout = 3,
@@ -209,7 +209,7 @@ return {
         },
         ["<leader>fp"] = { function() toggle_telescope() end, desc = "telescope harpoon2" },
         -- trouble
-        ["<leader>xx"] = { "<cmd>TroubleToggle document_diagnostics<cr>", noremap = true, silent = true },
+        ["<leader>xx"] = { "<cmd>Trouble diagnostics toggle<cr>", noremap = true, silent = true },
         ["gDo"] = { ":DiffviewOpen ", desc = "DiffViewOpen", noremap = true, silent = true },
         ["gDh"] = { ":DiffviewFileHistory ", desc = "DiffviewFileHistory", noremap = true, silent = true },
         ["gDq"] = { ":DiffviewClose<CR>", desc = "DiffviewClose", noremap = true, silent = true },

@@ -1,4 +1,4 @@
 return {
-  dir = "~/.local/share/nvim/lazy/myplugin/",
-  event = "VeryLazy",
+  -- dir = "~/.local/share/nvim/lazy/myplugin/",
+  -- event = "VeryLazy",
 }

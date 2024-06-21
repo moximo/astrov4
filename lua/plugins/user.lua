@@ -139,6 +139,10 @@ return {
           yank_last_code = "<C-y>",
         },
         show_line_numbers = true,
+        extra_curl_params = {
+          "--url-query",
+          "provider=OpenaiChat",
+        },
       }
     end,
     dependencies = {
