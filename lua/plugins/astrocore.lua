@@ -12,38 +12,34 @@ function setKeybinds()
   local wk = require "which-key"
 
   if fileTy == "markdown" then
-    wk.register {
-      ["<leader>m"] = {
-        name = "markdown",
-        p = { ":MarkdownPreview<CR>", "markdown preview", mode = { "n" } },
-      },
+    wk.add {
+      { "<leader>m", group = "markdown" },
+      { "<leader>mp", ":MarkdownPreview<CR>", desc = "markdown preview", mode = { "n" } },
     }
   elseif fileTy == "java" then
     -- 目前neotest-java 不能支持dap,采用jdtls默认的dap 执行test
-    wk.register {
-      ["<leader>ltd"] = {
-        require("jdtls.dap").test_nearest_method,
-        "run test dap",
-      },
-      ["<leader>ltld"] = {
-        require("jdtls.dap").test_nearest_method,
-        "run test dap",
-      },
+    wk.add {
+      { "<leader>ltd", require("jdtls.dap").test_nearest_method, desc = "run test dap" },
+      { "<leader>ltld", require("jdtls.dap").test_nearest_method, desc = "run test dap" },
     }
   elseif fileTy == "toml" then
-    wk.register {
-      ["g"] = {
-        Sf = { ':lua require("crates").show_features_popup()<cr>', "crates show_features_popup", mode = { "n" } },
-        Sd = {
-          ':lua require("crates").show_dependencies_popup()<cr>',
-          "crates show_dependencies_popup",
-          mode = { "n" },
-        },
-        Xh = { ':lua require("crates").open_homepage()<cr>', "crates open_homepage", mode = { "n" } },
-        Xr = { ':lua require("crates").open_repository()<cr>', "crates open_repository", mode = { "n" } },
-        Xd = { ':lua require("crates").open_documentation()<cr>', "crates open_documentation", mode = { "n" } },
-        Xc = { ':lua require("crates").open_crates_io()<cr>', "crates open_crates_io", mode = { "n" } },
+    wk.add {
+      {
+        "gSf",
+        ':lua require("crates").show_features_popup()<cr>',
+        desc = "crates show_features_popup",
+        mode = { "n" },
       },
+      {
+        "gSd",
+        ':lua require("crates").show_dependencies_popup()<cr>',
+        desc = "crates show_dependencies_popup",
+        mode = { "n" },
+      },
+      { "gXh", ':lua require("crates").open_homepage()<cr>', desc = "crates open_homepage", mode = { "n" } },
+      { "gXr", ':lua require("crates").open_repository()<cr>', desc = "crates open_repository", mode = { "n" } },
+      { "gXd", ':lua require("crates").open_documentation()<cr>', desc = "crates open_documentation", mode = { "n" } },
+      { "gXc", ':lua require("crates").open_crates_io()<cr>', desc = "crates open_crates_io", mode = { "n" } },
     }
   elseif fileTy == "sh" then
   end
