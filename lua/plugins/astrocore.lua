@@ -227,7 +227,7 @@ return {
       x = {
         --  mapmode-x 仅在视觉模式下激活
         ["<leader>tr"] = {
-          ":Pantran<CR>",
+          ":'<,'>Pantran<CR>",
           desc = "translate",
         },
         ["ga"] = {

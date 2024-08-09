@@ -100,7 +100,7 @@ return {
         mode = { "n", "v" },
       },
       {
-        "<leader>u",
+        "<leader>ud",
         ":UndotreeToggle<CR>",
         desc = "show undotree",
         mode = { "n", "v" },

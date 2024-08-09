@@ -500,6 +500,18 @@ return {
         "github:nvim-java/mason-registry",
         "github:mason-org/mason-registry",
       },
+      pip = {
+        ---@since 1.0.0
+        -- Whether to upgrade pip to the latest version in the virtual environment before installing packages.
+        upgrade_pip = false,
+
+        ---@since 1.0.0
+        -- These args will be added to `pip install` calls. Note that setting extra args might impact intended behavior
+        -- and is not recommended.
+        --
+        -- Example: { "--proxy", "https://proxyserver" }
+        install_args = { "--proxy", "http://127.0.0.1:8118" },
+      },
     },
   },
 }
