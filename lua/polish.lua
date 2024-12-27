@@ -17,3 +17,9 @@ vim.filetype.add {
   --   ["~/%.config/foo/.*"] = "fooscript",
   -- },
 }
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+    pattern = { "*.tpl", "*.yaml" },
+    callback = function()
+      vim.bo.filetype = "helm"
+    end,
+})

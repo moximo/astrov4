@@ -48,8 +48,8 @@ return {
         mode = { "n", "v" },
       },
       { "<leader>r", group = "rest http client" },
-      { "<leader>rh", "<Plug>RestNvim", desc = "run rest http clent" },
-      { "<leader>rc", "<Plug>RestNvimPreview", desc = "show rest curl" },
+      { "<leader>rh", "<cmd>Rest run<CR>", desc = "run rest http clent" },
+      { "<leader>rc", "<cmd>Rest curl comment<CR>", desc = "show rest curl" },
 
       { "<leader>lt", group = "lsp test" },
       { "<leader>ltr", ':lua require("neotest").run.run()<CR>', desc = "run test", mode = { "n", "v" } },

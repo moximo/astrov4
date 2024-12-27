@@ -19,27 +19,29 @@ function setKeybinds()
   elseif fileTy == "java" then
     -- 目前neotest-java 不能支持dap,采用jdtls默认的dap 执行test
     wk.add {
+      { "<leader>lt", group = "java test dap" },
       { "<leader>ltd", require("jdtls.dap").test_nearest_method, desc = "run test dap" },
       { "<leader>ltld", require("jdtls.dap").test_nearest_method, desc = "run test dap" },
     }
   elseif fileTy == "toml" then
     wk.add {
+      { "<leader>gS", group = "rust crates toml show features/dependencies" },
       {
-        "gSf",
+        "<leader>gSf",
         ':lua require("crates").show_features_popup()<cr>',
         desc = "crates show_features_popup",
         mode = { "n" },
       },
       {
-        "gSd",
+        "<leader>gSd",
         ':lua require("crates").show_dependencies_popup()<cr>',
         desc = "crates show_dependencies_popup",
         mode = { "n" },
       },
-      { "gXh", ':lua require("crates").open_homepage()<cr>', desc = "crates open_homepage", mode = { "n" } },
-      { "gXr", ':lua require("crates").open_repository()<cr>', desc = "crates open_repository", mode = { "n" } },
-      { "gXd", ':lua require("crates").open_documentation()<cr>', desc = "crates open_documentation", mode = { "n" } },
-      { "gXc", ':lua require("crates").open_crates_io()<cr>', desc = "crates open_crates_io", mode = { "n" } },
+      { "<leader>gXh", ':lua require("crates").open_homepage()<cr>', desc = "crates open_homepage", mode = { "n" } },
+      { "<leader>gXr", ':lua require("crates").open_repository()<cr>', desc = "crates open_repository", mode = { "n" } },
+      { "<leader>gXd", ':lua require("crates").open_documentation()<cr>', desc = "crates open_documentation", mode = { "n" } },
+      { "<leader>gXc", ':lua require("crates").open_crates_io()<cr>', desc = "crates open_crates_io", mode = { "n" } },
     }
   elseif fileTy == "sh" then
   end
@@ -169,7 +171,7 @@ return {
         },
         -- tables with the `name` key will be registered with which-key if it's installed
         -- this is useful for naming menus
-        ["<leader>b"] = { name = "Buffers" },
+        -- ["<leader>b"] = { name = "Buffers" },
         ["<leader>cd"] = { ":silent  cd %:h<CR>", desc = "cd %:h" },
         ["<A-j>"] = { ":m .+1<CR>==" },
         ["<A-k>"] = { ":m .-2<CR>==" },
@@ -206,10 +208,10 @@ return {
         ["<leader>fp"] = { function() toggle_telescope() end, desc = "telescope harpoon2" },
         -- trouble
         ["<leader>xx"] = { "<cmd>Trouble diagnostics toggle<cr>", noremap = true, silent = true },
-        ["gDo"] = { ":DiffviewOpen ", desc = "DiffViewOpen", noremap = true, silent = true },
-        ["gDh"] = { ":DiffviewFileHistory ", desc = "DiffviewFileHistory", noremap = true, silent = true },
-        ["gDq"] = { ":DiffviewClose<CR>", desc = "DiffviewClose", noremap = true, silent = true },
-        ["ga"] = {
+        ["<leader>gDo"] = { ":DiffviewOpen ", desc = "DiffViewOpen", noremap = true, silent = true },
+        ["<leader>gDh"] = { ":DiffviewFileHistory ", desc = "DiffviewFileHistory", noremap = true, silent = true },
+        ["<leader>gDq"] = { ":DiffviewClose<CR>", desc = "DiffviewClose", noremap = true, silent = true },
+        ["<leader>ga"] = {
           "<Plug>(EasyAlign)",
           desc = "EasyAlign",
         },
@@ -230,7 +232,7 @@ return {
           ":'<,'>Pantran<CR>",
           desc = "translate",
         },
-        ["ga"] = {
+        ["<leader>ga"] = {
           "<Plug>(EasyAlign)",
           desc = "EasyAlign",
         },
