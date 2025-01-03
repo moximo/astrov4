@@ -26,7 +26,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
-        print("LSP LspAttach from buffer " .. args.buf)
         require('nvim-dap-projects').search_project_config()
     end,
+    once = true,
 })
