@@ -477,4 +477,51 @@ return {
       },
     },
   },
+  {
+    -- 按照项目设置读取dap 配置，/.nvim-dap/nvim-dap.lua", "./.nvim-dap.lua", "./.nvim/nvim-dap.lua
+    "ldelossa/nvim-dap-projects",
+    event = "VeryLazy",
+  },
+{
+  "mikavilpas/yazi.nvim",
+  event = "VeryLazy",
+  keys = {
+    -- 👇 in this section, choose your own keymappings!
+    {
+      "<leader>yc",
+      "<cmd>Yazi<cr>",
+      desc = "Open yazi at the current file",
+    },
+    {
+      -- Open in the current working directory
+      "<leader>yw",
+      "<cmd>Yazi cwd<cr>",
+      desc = "Open the file manager in nvim's working directory" ,
+    },
+    {
+      -- NOTE: this requires a version of yazi that includes
+      -- https://github.com/sxyazi/yazi/pull/1305 from 2024-07-18
+      '<leader>yt',
+      "<cmd>Yazi toggle<cr>",
+      desc = "Resume the last yazi session",
+    },
+  },
+  ---@type YaziConfig
+  opts = {
+    -- if you want to open yazi instead of netrw, see below for more info
+    open_for_directories = false,
+    keymaps = {
+      show_help = '?',
+      open_file_in_vertical_split = 'vs',
+      open_file_in_horizontal_split = 's',
+      open_file_in_tab = '<c-t>',
+      grep_in_directory = 'f',
+      replace_in_directory = '<c-g>',
+      cycle_open_buffers = '<tab>',
+      copy_relative_path_to_selected_files = 'y',
+      send_to_quickfix_list = '<c-q>',
+      change_working_directory = ".",
+    },
+  },
+}
 }
