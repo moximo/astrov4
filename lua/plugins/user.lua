@@ -482,6 +482,20 @@ return {
     "ldelossa/nvim-dap-projects",
     event = "VeryLazy",
   },
+{  -- dap 虚拟文本
+  "theHamsta/nvim-dap-virtual-text",
+  dependencies = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
+  event = "User AstroFile",
+  opts = {
+    commented = true,
+    enabled = true,
+    enabled_commands = true,
+  },
+},
+{
+  "chrisbra/csv.vim",
+  ft = { "csv" },
+},
 {
   "mikavilpas/yazi.nvim",
   event = "VeryLazy",
@@ -513,7 +527,7 @@ return {
     keymaps = {
       show_help = '?',
       open_file_in_vertical_split = 'vs',
-      open_file_in_horizontal_split = 's',
+      open_file_in_horizontal_split = '<c-s>', -- 搜索时候会占用
       open_file_in_tab = '<c-t>',
       grep_in_directory = 'f',
       replace_in_directory = '<c-g>',
@@ -523,5 +537,5 @@ return {
       change_working_directory = ".",
     },
   },
-}
+},
 }
