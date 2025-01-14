@@ -105,6 +105,12 @@ return {
         desc = "show undotree",
         mode = { "n", "v" },
       },
+      {
+        "<leader>tl",
+        "<cmd>ToggleTermSendVisualSelection<CR>",
+        desc = "send visualSelection to terminal",
+        mode = { "v" },
+      },
     }
   end,
 }
