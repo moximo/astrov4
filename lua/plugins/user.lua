@@ -548,4 +548,17 @@ return {
     debug = false,              -- enable debug logging
   },
 },
+{
+  'akinsho/toggleterm.nvim',
+  version = "*",
+  opts = {
+    open_mapping = [[<c-\>]],
+    winbar = {
+      enabled = true,
+      name_formatter = function(term) --  term: Terminal
+        return term.name
+      end
+    },
+  }
+ },
 }

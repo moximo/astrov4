@@ -106,10 +106,16 @@ return {
         mode = { "n", "v" },
       },
       {
-        "<leader>tl",
-        "<cmd>ToggleTermSendVisualSelection<CR>",
-        desc = "send visualSelection to terminal",
-        mode = { "v" },
+        "<c-\\>",
+        "<cmd>ToggleTerm<CR>",
+        desc = "open terminal",
+        mode = { "v","n" },
+      },
+      {
+        "<leader>ts",
+        "<cmd>TermSelect<CR>",
+        desc = "select terminal",
+        mode = { "v","n" },
       },
     }
   end,
