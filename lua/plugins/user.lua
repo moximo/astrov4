@@ -214,13 +214,13 @@ return {
           ["$date"] = function() return os.date "%Y-%m-%d %H:%m:%S" end,
         },
         env = {
-            pattern = "%.env$"
+          pattern = "%.env$"
         },
         ui = {
-            keybinds = {
-                prev = "P",
-                next = "N",
-            },
+          keybinds = {
+            prev = "P",
+            next = "N",
+          },
         },
         fg="#9be9a8",
         highlight={
@@ -482,83 +482,83 @@ return {
     "ldelossa/nvim-dap-projects",
     event = "VeryLazy",
   },
-{  -- dap 虚拟文本
-  "theHamsta/nvim-dap-virtual-text",
-  dependencies = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
-  event = "User AstroFile",
-  opts = {
-    commented = true,
-    enabled = true,
-    enabled_commands = true,
-  },
-},
-{
-  "chrisbra/csv.vim",
-  ft = { "csv" },
-},
-{
-  "mikavilpas/yazi.nvim",
-  event = "VeryLazy",
-  keys = {
-    -- 👇 in this section, choose your own keymappings!
-    {
-      "<leader>yc",
-      "<cmd>Yazi<cr>",
-      desc = "Open yazi at the current file",
-    },
-    {
-      -- Open in the current working directory
-      "<leader>yw",
-      "<cmd>Yazi cwd<cr>",
-      desc = "Open the file manager in nvim's working directory" ,
-    },
-    {
-      -- NOTE: this requires a version of yazi that includes
-      -- https://github.com/sxyazi/yazi/pull/1305 from 2024-07-18
-      '<leader>yt',
-      "<cmd>Yazi toggle<cr>",
-      desc = "Resume the last yazi session",
-    },
-  },
-  ---@type YaziConfig
-  opts = {
-    -- if you want to open yazi instead of netrw, see below for more info
-    open_for_directories = false,
-    keymaps = {
-      show_help = '?',
-      open_file_in_vertical_split = 'vs',
-      open_file_in_horizontal_split = '<c-s>', -- 搜索时候会占用
-      open_file_in_tab = '<c-t>',
-      grep_in_directory = 'f',
-      replace_in_directory = '<c-g>',
-      cycle_open_buffers = '<tab>',
-      copy_relative_path_to_selected_files = 'y',
-      send_to_quickfix_list = '<c-q>',
-      change_working_directory = ".",
-    },
-  },
-},
-{
-  "joshuavial/aider.nvim",
-  opts = {
-    -- your configuration comes here
-    -- if you don't want to use the default settings
-    auto_manage_context = true, -- automatically manage buffer context
-    default_bindings = true,    -- use default <leader>A keybindings
-    debug = false,              -- enable debug logging
-  },
-},
-{
-  'akinsho/toggleterm.nvim',
-  version = "*",
-  opts = {
-    open_mapping = [[<c-\>]],
-    winbar = {
+  {  -- dap 虚拟文本
+    "theHamsta/nvim-dap-virtual-text",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
+    event = "User AstroFile",
+    opts = {
+      commented = true,
       enabled = true,
-      name_formatter = function(term) --  term: Terminal
-        return term.name
-      end
+      enabled_commands = true,
     },
-  }
- },
+  },
+  {
+    "chrisbra/csv.vim",
+    ft = { "csv" },
+  },
+  {
+    "mikavilpas/yazi.nvim",
+    event = "VeryLazy",
+    keys = {
+      -- 👇 in this section, choose your own keymappings!
+      {
+        "<leader>yc",
+        "<cmd>Yazi<cr>",
+        desc = "Open yazi at the current file",
+      },
+      {
+        -- Open in the current working directory
+        "<leader>yw",
+        "<cmd>Yazi cwd<cr>",
+        desc = "Open the file manager in nvim's working directory" ,
+      },
+      {
+        -- NOTE: this requires a version of yazi that includes
+        -- https://github.com/sxyazi/yazi/pull/1305 from 2024-07-18
+        '<leader>yt',
+        "<cmd>Yazi toggle<cr>",
+        desc = "Resume the last yazi session",
+      },
+    },
+    ---@type YaziConfig
+    opts = {
+      -- if you want to open yazi instead of netrw, see below for more info
+      open_for_directories = false,
+      keymaps = {
+        show_help = '?',
+        open_file_in_vertical_split = 'vs',
+        open_file_in_horizontal_split = '<c-s>', -- 搜索时候会占用
+        open_file_in_tab = '<c-t>',
+        grep_in_directory = 'f',
+        replace_in_directory = '<c-g>',
+        cycle_open_buffers = '<tab>',
+        copy_relative_path_to_selected_files = 'y',
+        send_to_quickfix_list = '<c-q>',
+        change_working_directory = ".",
+      },
+    },
+  },
+  {
+    "joshuavial/aider.nvim",
+    opts = {
+      -- your configuration comes here
+      -- if you don't want to use the default settings
+      auto_manage_context = true, -- automatically manage buffer context
+      default_bindings = true,    -- use default <leader>A keybindings
+      debug = false,              -- enable debug logging
+    },
+  },
+  {
+    'akinsho/toggleterm.nvim',
+    version = "*",
+    opts = {
+      open_mapping = [[<c-\>]],
+      winbar = {
+        enabled = true,
+        name_formatter = function(term) --  term: Terminal
+          return term.name
+        end
+      },
+    }
+  },
 }
