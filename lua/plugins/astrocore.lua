@@ -205,15 +205,15 @@ return {
           function() require("harpoon"):list():remove() end,
           desc = "harpoon2 mark rm",
         },
-        ["<leader>fp"] = { function() toggle_telescope() end, desc = "telescope harpoon2" },
+        ["<leader>fp"]  = { function() toggle_telescope() end, desc = "telescope harpoon2" },
         -- trouble
-        ["<leader>xx"] = { "<cmd>Trouble diagnostics toggle<cr>", noremap = true, silent = true },
+        ["<leader>xx"]  = { "<cmd>Trouble diagnostics toggle<cr>", noremap = true, silent = true },
         ["<leader>gDo"] = { ":DiffviewOpen ", desc = "DiffViewOpen", noremap = true, silent = true },
         ["<leader>gDh"] = { ":DiffviewFileHistory ", desc = "DiffviewFileHistory", noremap = true, silent = true },
         ["<leader>gDq"] = { ":DiffviewClose<CR>", desc = "DiffviewClose", noremap = true, silent = true },
-        ["<leader>ga"] = {
+        ["<leader>ga"]  = {
           "<Plug>(EasyAlign)",
-          desc = "EasyAlign",
+          desc          = "EasyAlign",
         },
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
