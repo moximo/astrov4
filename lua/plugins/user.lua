@@ -458,6 +458,14 @@ return {
   },
   {
     "williamboman/mason.nvim",
+    config=function (_,opts)
+      opts.registries = {
+        "github:nvim-java/mason-registry",
+        "github:mason-org/mason-registry",
+      }
+      require("mason").setup(opts)
+      return opts
+    end,
     opts = {
       registries = {
         "github:nvim-java/mason-registry",
@@ -651,4 +659,6 @@ return {
       end,
     })
   end,
-}}
+},
+
+}
