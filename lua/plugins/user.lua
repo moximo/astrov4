@@ -356,7 +356,7 @@ return {
           require "neotest-go",
           require "neotest-rust" {
             args = { "--no-capture" },
-            dap_adapter = "lldb",
+            dap_adapter = "codelldb",
           },
           require "neotest-python",
           require "neotest-java",
