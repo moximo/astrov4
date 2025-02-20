@@ -209,6 +209,14 @@ return {
         -- trouble
         ["<leader>xx"]  = { "<cmd>Trouble diagnostics toggle<cr>", noremap = true, silent = true },
         ["<leader>gDo"] = { ":DiffviewOpen ", desc = "DiffViewOpen", noremap = true, silent = true },
+        -- :DiffviewFileHistory
+        -- :DiffviewFileHistory %
+        -- :DiffviewFileHistory path/to/some/file.txt
+        -- :DiffviewFileHistory path/to/some/directory
+        -- :DiffviewFileHistory include/this and/this :!but/not/this
+        -- :DiffviewFileHistory --range=origin..HEAD
+        -- :DiffviewFileHistory --range=feat/example-branch
+        -- :'<,'>DiffviewFileHistory
         ["<leader>gDh"] = { ":DiffviewFileHistory ", desc = "DiffviewFileHistory", noremap = true, silent = true },
         ["<leader>gDq"] = { ":DiffviewClose<CR>", desc = "DiffviewClose", noremap = true, silent = true },
         ["<leader>ga"]  = {

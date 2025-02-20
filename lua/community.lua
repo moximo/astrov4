@@ -39,4 +39,6 @@ return {
   { import = "astrocommunity.utility.telescope-live-grep-args-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  { import = "astrocommunity.fuzzy-finder.namu-nvim" },
+  { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
 }
