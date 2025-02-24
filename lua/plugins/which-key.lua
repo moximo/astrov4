@@ -106,7 +106,7 @@ return {
         mode = { "n", "v" },
       },
       {
-        "<c-/>",
+        "<c-\\>",
         "<cmd>ToggleTerm<CR>",
         desc = "open terminal",
         mode = { "v","n" },
