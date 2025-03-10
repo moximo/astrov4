@@ -204,12 +204,17 @@ return {
   },
   {
     "rest-nvim/rest.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
+    -- requires = { "nvim-lua/plenary.nvim" },
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      opts = function (_, opts)
+        opts.ensure_installed = opts.ensure_installed or {}
+        table.insert(opts.ensure_installed, "http")
+      end,
+    },
     ft = "http",
-    -- commit = "91badd46c60df6bd9800c809056af2d80d33da4c",
-    -- event = "VeryLazy",
     config = function()
-      require("rest-nvim").setup({
+      vim.g.rest_nvim = {
         custom_dynamic_variables = {
           ["$date"] = function() return os.date "%Y-%m-%d %H:%m:%S" end,
         },
@@ -225,7 +230,7 @@ return {
         fg="#9be9a8",
         highlight={
         },
-      })
+      }
     end,
   },
   {
@@ -629,8 +634,9 @@ return {
     { "<leader>sg", function() Snacks.picker.grep() end, desc = "Grep" },
     { "<leader>sw", function() Snacks.picker.grep_word() end, desc = "Visual selection or word", mode = { "n", "x" } },
 
-    -- { "<leader>fc", function() Snacks.picker.grep_word() end, desc = "Visual selection or word", mode = { "n", "x" } },
-    -- { "<leader>fw", function() Snacks.picker.grep() end, desc = "Grep" },
+    -- 这两个和sg,sw 功能相同 ,只是为了兼容astronvim的命令
+    { "<leader>fc", function() Snacks.picker.grep_word() end, desc = "Visual selection or word", mode = { "n", "x" } },
+    { "<leader>fw", function() Snacks.picker.grep() end, desc = "Grep" },
     -- search
     { '<leader>s"', function() Snacks.picker.registers() end, desc = "Registers" },
     { '<leader>s/', function() Snacks.picker.search_history() end, desc = "Search History" },

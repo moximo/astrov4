@@ -5,6 +5,15 @@
 vim.cmd "autocmd User TelescopePreviewerLoaded setlocal number"
 vim.cmd "au BufNewFile,BufRead *.http :setl ft=http"
 
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "json",
+  callback = function()
+    vim.bo.formatexpr = ""
+    vim.bo.formatprg = "jq"
+  end,
+})
+
 -- Set up custom filetypes
 vim.filetype.add {
   -- extension = {
