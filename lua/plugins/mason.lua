@@ -12,6 +12,7 @@ return {
         "lua_ls",
         "pyright",
         "jdtls",
+        "lombok-nightly",
         "taplo",
         "lemminx",
         "bashls",
