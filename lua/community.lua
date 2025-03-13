@@ -20,7 +20,7 @@ return {
             runtimes = {
               {
                 name = "JavaSE-21",
-                path = "/home/moximo/Software/jdk-21.0.2/",
+                path = os.getenv "HOME" .. "/Software/jdk-21.0.2/",
               },
             },
           },
