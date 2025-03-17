@@ -12,7 +12,6 @@ return {
         "lua_ls",
         "pyright",
         "jdtls",
-        "lombok-nightly",
         "taplo",
         "lemminx",
         "bashls",
@@ -46,6 +45,7 @@ return {
         "tailwindcss-language-server",
         "typescript-language-server",
         "vue-language-server",
+        "lombok-nightly",
       })
     end,
   },

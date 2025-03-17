@@ -18,10 +18,10 @@ return {
         java = {
           configuration = {
             runtimes = {
-              {
-                name = "JavaSE-21",
-                path = os.getenv "HOME" .. "/Software/jdk-21.0.2/",
-              },
+            --   {
+            --     name = "JavaSE-21",
+            --     path = os.getenv "HOME" .. "/Software/jdk-21.0.2/",
+            --   },
             },
           },
         },

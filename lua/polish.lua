@@ -2,6 +2,8 @@
 -- things like custom filetypes. This just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
 
+vim.env.PATH = vim.env.HOME .. "/.local/share/mise/shims:" .. vim.env.PATH
+
 vim.cmd "autocmd User TelescopePreviewerLoaded setlocal number"
 vim.cmd "au BufNewFile,BufRead *.http :setl ft=http"
 
