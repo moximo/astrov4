@@ -14,7 +14,8 @@ function setKeybinds()
   if fileTy == "markdown" then
     wk.add {
       { "<leader>m", group = "markdown" },
-      { "<leader>mp", ":MarkdownPreview<CR>", desc = "markdown preview", mode = { "n" } },
+      { "<leader>mp", ":Markview Toggle<CR>", desc = "markdown  preview toggle", mode = { "n" } },
+      { "<leader>mp", ":Markview splitToggle<CR>", desc = "markdown split preview", mode = { "n" } },
     }
   elseif fileTy == "java" then
     -- 目前neotest-java 不能支持dap,采用jdtls默认的dap 执行test
