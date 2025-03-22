@@ -7,46 +7,6 @@ return {
     -- Add bindings which show up as group name
     local wk = require "which-key"
     wk.add {
-      { "<leader>a", group = "ChatGPT" },
-      { "<leader>ac", "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
-      {
-        "<leader>ae",
-        "<cmd>ChatGPTEditWithInstruction<CR>",
-        desc = "ChatGPT Edit with instruction",
-        mode = { "n", "v" },
-      },
-      {
-        "<leader>ag",
-        "<cmd>ChatGPTRun grammar_correction<CR>",
-        desc = "ChatGPT Grammar Correction",
-        mode = { "n", "v" },
-      },
-      {
-        "<leader>atz",
-        "<cmd>ChatGPTRun translate chiness<CR>",
-        desc = "ChatGPT Translate to chiness",
-        mode = { "n", "v" },
-      },
-      {
-        "<leader>ate",
-        "<cmd>ChatGPTRun translate english<CR>",
-        desc = "ChatGPT Translate to english",
-        mode = { "n", "v" },
-      },
-      { "<leader>ak", "<cmd>ChatGPTRun keywords<CR>", desc = "ChatGPT Keywords", mode = { "n", "v" } },
-      { "<leader>ad", "<cmd>ChatGPTRun docstring<CR>", desc = "ChatGPT Docstring", mode = { "n", "v" } },
-      { "<leader>aa", "<cmd>ChatGPTRun add_tests<CR>", desc = "ChatGPT Add Tests", mode = { "n", "v" } },
-      { "<leader>ao", "<cmd>ChatGPTRun optimize_code<CR>", desc = "ChatGPT Optimize Code", mode = { "n", "v" } },
-      { "<leader>as", "<cmd>ChatGPTRun summarize<CR>", desc = "ChatGPT Summarize", mode = { "n", "v" } },
-      { "<leader>af", "<cmd>ChatGPTRun fix_bugs<CR>", desc = "ChatGPT Fix Bugs", mode = { "n", "v" } },
-      { "<leader>ax", "<cmd>ChatGPTRun explain_code<CR>", desc = "ChatGPT Explain Code", mode = { "n", "v" } },
-      { "<leader>ar", "<cmd>ChatGPTRun roxygen_edit<CR>", desc = "ChatGPT Roxygen Edit", mode = { "n", "v" } },
-      {
-        "<leader>al",
-        "<cmd>ChatGPTRun code_readability_analysis<CR>",
-        desc = "ChatGPT Code Readability Analysis",
-        mode = { "n", "v" },
-      },
       { "<leader>r", group = "rest http client" },
       { "<leader>rh", "<cmd>Rest run<CR>", desc = "run rest http clent" },
       { "<leader>rc", "<cmd>Rest curl comment<CR>", desc = "show rest curl" },

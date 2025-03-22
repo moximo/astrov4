@@ -133,30 +133,6 @@ return {
     end,
   },
   {
-    -- chatgpt suport
-    "jackMort/ChatGPT.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("chatgpt").setup {
-        keymaps = {
-          submit = "<C-Enter>",
-          yank_last_code = "<C-y>",
-        },
-        show_line_numbers = true,
-        extra_curl_params = {
-          "--url-query",
-          "provider=OpenaiChat",
-        },
-      }
-    end,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "folke/trouble.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-  },
-  {
     -- undotree
     "mbbill/undotree",
     event = "VeryLazy",
@@ -301,13 +277,6 @@ return {
       --     "saghen/blink.cmp"
       -- },
   },
-  -- {
-  --   "iamcco/markdown-preview.nvim",
-  --   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-  --   build = "cd app && yarn install",
-  --   init = function() vim.g.mkdp_filetypes = { "markdown" } end,
-  --   ft = { "markdown" },
-  -- },
   {
     "mattn/emmet-vim",
     event = "VeryLazy",
